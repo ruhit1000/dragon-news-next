@@ -2,14 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import ThemeToggle from '../ui/ThemeToggle';
+import Navlinks from './Navlinks';
 
 const Navbar = () => {
-
-    const links = [
-        { id: 1, name: "Home", href: "/" },
-        { id: 2, name: "About", href: "/about" },
-        { id: 3, name: "Career", href: "/career" },
-    ]
 
     return (
         <div className="navbar bg-base-100 container mx-auto">
@@ -21,17 +16,13 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        {links.map(link => (
-                            <li key={link.id}><Link href={link.href}>{link.name}</Link></li>
-                        ))}
+                        <Navlinks />
                     </ul>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    {links.map(link => (
-                        <li key={link.id}><Link className='text-[#706F6F] text-lg' href={link.href}>{link.name}</Link></li>
-                    ))}
+                    <Navlinks />
                 </ul>
             </div>
             <div className="navbar-end flex items-center gap-4">

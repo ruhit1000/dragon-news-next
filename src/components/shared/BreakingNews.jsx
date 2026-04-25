@@ -16,7 +16,7 @@ const BreakingNews = () => {
                 Latest News
             </button>
             <Marquee 
-            className='font-semibold text-[#403F3F] text-lg'
+            className='font-semibold text-base-content text-lg'
             pauseOnHover={true}
             >
                 {news.map(item => (
