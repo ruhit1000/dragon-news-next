@@ -1,5 +1,5 @@
 'use client'
-import { getCategories } from '@/data/data-fetch';
+import { getCategories } from '@/lib/data-fetch';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';

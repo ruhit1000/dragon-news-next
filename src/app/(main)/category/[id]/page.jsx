@@ -1,6 +1,6 @@
 import LeftSidebar from '@/components/Homepage/LeftSideBar/LeftSidebar';
 import RightSideBar from '@/components/Homepage/RightSideBar/RightSideBar';
-import { getNewsByCategory } from '@/data/data-fetch';
+import { getNewsByCategory } from '@/lib/data-fetch';
 import React from 'react';
 
 const NewsCategoryPage = async ({ params }) => {

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import ThemeToggle from '../ui/ThemeToggle';
 import Navlinks from './Navlinks';
-import { getCategories } from '@/data/data-fetch';
+import { getCategories } from '@/lib/data-fetch';
 
 const Navbar = async () => {
     const categories = await getCategories();
