@@ -3,6 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+export const generateMetadata = async ({ params }) => {
+    const { id } = await params;
+    const news = await getNewsDetails(id);
+
+    return {
+        title: news.title,
+        description: news.details.slice(0, 160) + '...'
+    };
+}
+
 const NewsDetailsPage = async ({ params }) => {
     const { id } = await params;
     const news = await getNewsDetails(id);

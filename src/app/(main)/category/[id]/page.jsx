@@ -4,6 +4,11 @@ import RightSideBar from '@/components/Homepage/RightSideBar/RightSideBar';
 import { getNewsByCategory } from '@/lib/data-fetch';
 import React from 'react';
 
+export const metadata = {
+    title: "News Category - Dragon News",
+    description: "Explore news articles categorized by topics on Dragon News. Stay informed with the latest updates and in-depth coverage across various categories, including politics, technology, sports, entertainment, and more."
+}
+
 const NewsCategoryPage = async ({ params }) => {
 
     const { id } = await params;

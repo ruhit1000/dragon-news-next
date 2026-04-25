@@ -1,6 +1,11 @@
 import NewsLetterForm from '@/components/ui/NewsLetterForm';
 import React from 'react';
 
+export const metadata = {
+    title: "About Us - Dragon News",
+    description: "Learn more about Dragon News, our mission, vision, and core values. Discover how we are committed to delivering accurate and impactful journalism to our readers."
+}
+
 const AboutUsPage = () => {
     return (
         <div className="max-w-6xl mx-auto px-4 py-12 text-base-content">

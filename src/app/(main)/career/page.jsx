@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+    title: "Career Opportunities - Dragon News",
+    description: "Explore exciting career opportunities at Dragon News. Join our team of passionate journalists, editors, and tech professionals dedicated to delivering fearless and impactful journalism to a global audience."
+}   
+
 const CareerPage = () => {
     const jobListings = [
         {
