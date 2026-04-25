@@ -8,6 +8,12 @@ import { getCategories } from '@/lib/data-fetch';
 const Navbar = async () => {
     const categories = await getCategories();
 
+    const links = [
+        { id: 1, name: "Home", href: "/" },
+        { id: 2, name: "About", href: "/about-us" },
+        { id: 3, name: "Career", href: "/career" },
+    ]
+
     return (
         <div className="navbar bg-base-100 px-5 lg:px-10">
             <div className="navbar-start">

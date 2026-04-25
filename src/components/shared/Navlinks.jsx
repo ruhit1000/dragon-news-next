@@ -1,5 +1,6 @@
 'use client'
 import { getCategories } from '@/lib/data-fetch';
+import { navlink } from '@/lib/funtions';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -17,9 +18,7 @@ const Navlinks = ({ categories }) => {
     return (
         <>
             {
-                links.map(link => (
-                    <li key={link.id}><Link className={pathname === link.href ? 'text-blue-500 underline' : ''} href={link.href}>{link.name}</Link></li>
-                ))
+                links.map(link => navlink(link, pathname))
             }
             <li className='lg:hidden'>
                 <a>Categories:</a>
