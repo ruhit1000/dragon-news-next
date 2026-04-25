@@ -11,7 +11,7 @@ const news = [
 
 const BreakingNews = () => {
     return (
-        <div className='h-20 bg-base-300 flex items-center p-4 justify-between container mx-auto mb-4'>
+        <div className='h-20 bg-base-300 flex items-center p-4 justify-between mb-4'>
             <button className='btn bg-[#D72050] text-base-100 mr-2'>
                 Latest News
             </button>

@@ -3,11 +3,13 @@ import Link from 'next/link';
 import React from 'react';
 import ThemeToggle from '../ui/ThemeToggle';
 import Navlinks from './Navlinks';
+import { getCategories } from '@/data/data-fetch';
 
-const Navbar = () => {
+const Navbar = async () => {
+    const categories = await getCategories();
 
     return (
-        <div className="navbar bg-base-100 container mx-auto">
+        <div className="navbar bg-base-100 px-5 lg:px-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -16,17 +18,17 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <Navlinks />
+                        <Navlinks categories={categories} />
                     </ul>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <Navlinks />
+                    <Navlinks categories={categories} />
                 </ul>
             </div>
             <div className="navbar-end flex items-center gap-4">
-                <ThemeToggle />
+                {/* <ThemeToggle /> */}
                 <div className="avatar">
                     <div className="w-12">
                         <Image src="https://img.daisyui.com/images/profile/demo/wonderperson@192.webp" alt="User" width={40} height={40} className='h-10 w-10 rounded-full' />

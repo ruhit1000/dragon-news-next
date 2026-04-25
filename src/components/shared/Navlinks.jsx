@@ -1,9 +1,10 @@
 'use client'
+import { getCategories } from '@/data/data-fetch';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const Navlinks = () => {
+const Navlinks = ({ categories }) => {
 
     const links = [
         { id: 1, name: "Home", href: "/" },
@@ -17,9 +18,17 @@ const Navlinks = () => {
         <>
             {
                 links.map(link => (
-                    <li key={link.id}><Link className={pathname === link.href && 'text-blue-500'} href={link.href}>{link.name}</Link></li>
+                    <li key={link.id}><Link className={pathname === link.href ? 'text-blue-500 underline' : ''} href={link.href}>{link.name}</Link></li>
                 ))
             }
+            <li className='lg:hidden'>
+                <a>Categories:</a>
+                <ul className="p-2 space-y-2">
+                    {
+                        categories.map(category => <li key={category.category_id}>{category.category_name}</li>)
+                    }
+                </ul>
+            </li>
         </>
     );
 };
