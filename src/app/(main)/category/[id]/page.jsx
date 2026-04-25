@@ -18,11 +18,11 @@ const NewsCategoryPage = async ({ params }) => {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 container mx-auto px-4 py-8">
 
-            <div className="hidden col-span-3 lg:block">
+            <div className="hidden lg:col-span-3 lg:block">
                 <LeftSidebar activeId={id} />
             </div>
 
-            <div className="col-span-6">
+            <div className="lg:col-span-6">
                 <h2 className="text-xl font-semibold mb-4 text-base-content">Dragon News Home</h2>
                 <div className='space-y-4'>
                     {
@@ -35,7 +35,7 @@ const NewsCategoryPage = async ({ params }) => {
                 </div>
             </div>
 
-            <div className="hidden col-span-3 lg:block">
+            <div className="lg:col-span-3">
                 <RightSideBar />
             </div>
 

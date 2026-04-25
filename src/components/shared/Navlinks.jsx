@@ -24,7 +24,9 @@ const Navlinks = ({ categories }) => {
                 <a>Categories:</a>
                 <ul className="p-2 space-y-2">
                     {
-                        categories.map(category => <li key={category.category_id}>{category.category_name}</li>)
+                        categories.map(category => <li key={category.category_id}><Link className='block' href={`/category/${category.category_id}`}>
+                            {category.category_name}
+                        </Link></li>)
                     }
                 </ul>
             </li>
