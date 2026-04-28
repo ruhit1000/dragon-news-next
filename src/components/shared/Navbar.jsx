@@ -4,6 +4,7 @@ import React from 'react';
 import ThemeToggle from '../ui/ThemeToggle';
 import Navlinks from './Navlinks';
 import { getCategories } from '@/lib/data-fetch';
+import UserDetails from './UserDetails';
 
 const Navbar = async () => {
     const categories = await getCategories();
@@ -33,19 +34,9 @@ const Navbar = async () => {
                     <Navlinks categories={categories} />
                 </ul>
             </div>
-            <div className="navbar-end flex items-center gap-4">
+            <div className="navbar-end">
                 {/* <ThemeToggle /> */}
-                <div className="avatar">
-                    <div className="w-12">
-                        <Image src="https://img.daisyui.com/images/profile/demo/wonderperson@192.webp" alt="User" width={40} height={40} className='h-10 w-10 rounded-full' />
-                    </div>
-                </div>
-                <Link
-                    href={"/login"}
-                    className='btn btn-neutral px-10 mb-1'
-                >
-                    Login
-                </Link>
+                <UserDetails />
             </div>
         </div>
     );
