@@ -9,24 +9,25 @@ const UserDetails = () => {
   const user = session?.user;
   const defaultAvatar =
     "https://img.daisyui.com/images/profile/demo/wonderperson@192.webp";
-  console.log("user details:", user);
 
   return (
     <div className="flex items-center gap-4">
       {user && (
         <span className="font-medium">Welcome, {user.name.split(" ")[0]}</span>
       )}
-      <div className="avatar">
-        <div className="w-12">
-          <Image
-            src={user?.image || defaultAvatar}
-            alt="User"
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-full"
-          />
+      {user && (
+        <div className="avatar">
+          <div className="w-12">
+            <Image
+              src={user?.image || defaultAvatar}
+              alt="User"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full"
+            />
+          </div>
         </div>
-      </div>
+      )}
       {user ? (
         <button
           className="btn btn-neutral px-10 mb-1"
