@@ -21,7 +21,7 @@ const LoginPage = () => {
         const { data: res, error } = await authClient.signIn.email({
             email,
             password,
-            callbackURL: "http://localhost:3000"
+            callbackURL: process.env.BETTER_AUTH_URL
         })
 
         if (error) {

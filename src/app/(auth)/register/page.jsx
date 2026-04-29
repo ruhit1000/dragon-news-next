@@ -24,7 +24,7 @@ const RegisterPage = () => {
             email,
             password,
             image: photoURL,
-            callbackURL: "http://localhost:3000/login"
+            callbackURL: `${process.env.BETTER_AUTH_URL}/login`
         })
 
         if (error) {
